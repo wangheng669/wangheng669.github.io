@@ -79,14 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://www.wangheng669.top/404.html">
+<meta name="description" content="NodeJs初识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NodeJs初识">
+<meta property="og:url" content="http://www.wangheng669.top/2018/01/26/NodeJs初识/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="NodeJs初识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T02:37:34.970Z">
+<meta property="og:updated_time" content="2018-01-26T05:33:26.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客">
+<meta name="twitter:title" content="NodeJs初识">
+<meta name="twitter:description" content="NodeJs初识">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wangheng669.top/404.html"/>
+  <link rel="canonical" href="http://www.wangheng669.top/2018/01/26/NodeJs初识/"/>
 
 
 
 
 
-  <title> | 我的博客</title>
+  <title>NodeJs初识 | 我的博客</title>
   
 
 
@@ -271,51 +274,214 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.wangheng669.top/2018/01/26/NodeJs初识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王 恒">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/wh.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <!DOCTYPE HTML>
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8;">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="robots" content="all">
-    <meta name="robots" content="index,follow">
-    <link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css">
-</head>
-
-<body>
-    <script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/" homepagename="回到我的主页">
-  </script>
-    <script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
-    <script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"></script>
-</body>
-
-</html>
+          <h1 class="post-title" itemprop="name headline">NodeJs初识</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T12:07:44+08:00">
+                2018-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/01/26/NodeJs初识/" class="leancloud_visitors" data-flag-title="NodeJs初识">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>NodeJs初识<br><a id="more"></a></p>
+<h1 id="NodeJs初识"><a href="#NodeJs初识" class="headerlink" title="NodeJs初识"></a>NodeJs初识</h1><blockquote>
+<p>前不久使用hexo搭建了自己的个人博客,虽然一路都是install过来的,但感觉应该对所用到的工具有更深的了解才对,所以在此简单记录一下NodeJs的使用</p>
+</blockquote>
+<h2 id="NodeJs的安装"><a href="#NodeJs的安装" class="headerlink" title="NodeJs的安装"></a>NodeJs的安装</h2><ul>
+<li>windows的安装<br>  官网 <a href="http://nodejs.org.com下载,一路next,别忘了选择添加环境变量" target="_blank" rel="noopener">http://nodejs.org.com下载,一路next,别忘了选择添加环境变量</a></li>
+<li><p>linux的安装<br>  官网下载源码包,wget获取tar解压,./configure –prefix=路径 make &amp;&amp; make install<br>  配置环境变量具体请看菜鸟教程。。。</p>
+<h2 id="NodeJs的基本命令"><a href="#NodeJs的基本命令" class="headerlink" title="NodeJs的基本命令"></a>NodeJs的基本命令</h2><p>  NodeJs的功能和Nginx以及Apache类似,可以处理和返回请求,只需要引入自带的http模块即可</p>
+<p>  var http = require(“http”); 引入 required 模块</p>
+<p>  http.createServer(reponse,request){} 创建服务器</p>
+<p>  listen(8888) 监听某端口,可通过该端口获取对应的值,跟在createServer的后面</p>
+</li>
+</ul>
+<h2 id="NPM的使用介绍"><a href="#NPM的使用介绍" class="headerlink" title="NPM的使用介绍"></a>NPM的使用介绍</h2><pre><code>包安装管理工具,能解决NodeJS部署问题
+</code></pre><ul>
+<li>主要功能<br>  下载第三方包<br>  下载第三方命令<br>  上传自己的包<br><strong>注意</strong> 新版Nodejs已经集成了NPM</li>
+</ul>
+<h2 id="NPM的基本命令"><a href="#NPM的基本命令" class="headerlink" title="NPM的基本命令"></a>NPM的基本命令</h2><ul>
+<li>安装 npm install 包名</li>
+<li>卸载 npm uninstall 包名</li>
+<li>更新 npm update 包名</li>
+<li>搜索 npm search 包名</li>
+<li>生成 npm init 需要package.json</li>
+<li>全局 npm <command> -g</li>
+<li>帮助 npm <command> -h</li>
+</ul>
+<h2 id="NodeJs-REPL"><a href="#NodeJs-REPL" class="headerlink" title="NodeJs REPL"></a>NodeJs REPL</h2><blockquote>
+<p>交互式解释器,类似于windows的cmd<br>Node自带交互式解释器</p>
+</blockquote>
+<ul>
+<li>读取 读取用户输入</li>
+<li>执行 执行输入的数据结构</li>
+<li>打印 输出结果</li>
+<li><p>循环 循环操作以上步骤</p>
+</li>
+<li><p>简单的表达式运算</p>
+<blockquote>
+<p>例如加减乘除等</p>
+</blockquote>
+</li>
+<li><p>使用变量</p>
+<blockquote>
+<p>可以将数据存储在变量中,必须使用var,没有var会直接输出</p>
+</blockquote>
+</li>
+<li><p>多行表达式</p>
+<blockquote>
+<p>例如for循环while循环等</p>
+</blockquote>
+</li>
+<li><p>下划线_变量</p>
+<blockquote>
+<p>可通过_获取上一次的运算结果</p>
+</blockquote>
+</li>
+<li><p>REPL命令</p>
+<blockquote>
+<p>ctrl+c 退出当前终端<br>ctrl+c两次 退出Node PERL<br>ctrl+d 退出Node PERL<br>向上/向下键 查看输入的历史命令<br>tab键 列出当前命令<br>.help 列出使用命令<br>.break 退出多行表达式<br>.clear 退出多行表达式<br>.save filename 保存当前Node PERL到指定文件<br>.load filename 载入当前Node PERL的会话内容</p>
+</blockquote>
+</li>
+</ul>
+<p>NodeJs回调函数<br>NodeJs支持大量的回调函数,可以处理并发请求</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/26/centos7和windows的安装/" rel="next" title="centos7和windows的安装">
+                <i class="fa fa-chevron-left"></i> centos7和windows的安装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/26/Memcache基础教程/" rel="prev" title="Memcache基础教程">
+                Memcache基础教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -348,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -411,6 +586,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NodeJs初识"><span class="nav-number">1.</span> <span class="nav-text">NodeJs初识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJs的安装"><span class="nav-number">1.1.</span> <span class="nav-text">NodeJs的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJs的基本命令"><span class="nav-number">1.2.</span> <span class="nav-text">NodeJs的基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NPM的使用介绍"><span class="nav-number">1.3.</span> <span class="nav-text">NPM的使用介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NPM的基本命令"><span class="nav-number">1.4.</span> <span class="nav-text">NPM的基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJs-REPL"><span class="nav-number">1.5.</span> <span class="nav-text">NodeJs REPL</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

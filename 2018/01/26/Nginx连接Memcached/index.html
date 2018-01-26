@@ -79,14 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://www.wangheng669.top/404.html">
+<meta name="description" content="Nginx连接Memcached">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx连接Memcached">
+<meta property="og:url" content="http://www.wangheng669.top/2018/01/26/Nginx连接Memcached/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="Nginx连接Memcached">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T02:37:34.970Z">
+<meta property="og:updated_time" content="2018-01-26T05:33:29.021Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客">
+<meta name="twitter:title" content="Nginx连接Memcached">
+<meta name="twitter:description" content="Nginx连接Memcached">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wangheng669.top/404.html"/>
+  <link rel="canonical" href="http://www.wangheng669.top/2018/01/26/Nginx连接Memcached/"/>
 
 
 
 
 
-  <title> | 我的博客</title>
+  <title>Nginx连接Memcached | 我的博客</title>
   
 
 
@@ -271,51 +274,176 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.wangheng669.top/2018/01/26/Nginx连接Memcached/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王 恒">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/wh.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <!DOCTYPE HTML>
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8;">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="robots" content="all">
-    <meta name="robots" content="index,follow">
-    <link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css">
-</head>
-
-<body>
-    <script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/" homepagename="回到我的主页">
-  </script>
-    <script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
-    <script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"></script>
-</body>
-
-</html>
+          <h1 class="post-title" itemprop="name headline">Nginx连接Memcached</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T12:14:06+08:00">
+                2018-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/01/26/Nginx连接Memcached/" class="leancloud_visitors" data-flag-title="Nginx连接Memcached">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Nginx连接Memcached<br><a id="more"></a></p>
+<h1 id="Nginx连接Memcached"><a href="#Nginx连接Memcached" class="headerlink" title="Nginx连接Memcached"></a>Nginx连接Memcached</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><pre><code>安装Nginx,Mysql,PHP,Memecached
+</code></pre><h2 id="配置Nginx-conf文件"><a href="#配置Nginx-conf文件" class="headerlink" title="配置Nginx.conf文件"></a>配置Nginx.conf文件</h2><pre><code>set $memcached_key &quot;$uri&quot;;
+memcached_pass 127.0.0.1:11211;
+</code></pre><h2 id="启动Memcached并连接localhost-添加数据"><a href="#启动Memcached并连接localhost-添加数据" class="headerlink" title="启动Memcached并连接localhost,添加数据"></a>启动Memcached并连接localhost,添加数据</h2><pre><code>/usr/bin/memcached -u root -d
+telnet localhost 11211
+add /user1.html[此处为Key] 0 0 8[此处为字节数量]
+wangheng
+</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><pre><code>当访问user1时会返回指定的值    
+</code></pre><h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><pre><code>当输入不存在的key时应先调用php方法
+使用php方法连接数据库返回对应Key的值,并将其写入到Memcached中,用于下次调用
+</code></pre><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><pre><code>在实际开发中,会有多台服务器进行处理,如果全部设置Memcached,添加数据和获取时会混乱
+</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><pre><code>1.安装第三方模块[nginx只能在编译的时候安装模块]
+    需要对nginx进行重新编译并制定 -add-module=/usr/loocal/src/模块路径
+    make &amp;&amp; make install
+2.添加三台实验服务器 upstream server_name{
+        server localhost:11211;
+    }
+3.修改Nginx.conf中的memcached_pass server_name;
+这个时候memcached处理就不会乱跑了,但是php的写入还没有同步
+4.修改php.ini添加memcache.hash_strategy=consistent
+</code></pre><h2 id="难受的问题"><a href="#难受的问题" class="headerlink" title="难受的问题"></a>难受的问题</h2><pre><code>看了老师的视频,发现在php一致性时出现了访问不一致的问题,根据老师的说明只需要添加memcache.hash_strategy=consistent即可,但到后来发现并没有其作用,经过反复调试发现,原来我并没有安装memcache,只安装了memcached扩展,搞不懂为什么,于是网上搜索了Memcache的php7安装的方法,在php.ini中添加了exstion=memcache.so后才算完事,进行配置时要使用远程主机名而不是localhost
+
+经过测试发现:memcached不能使用一致性,因为没有那个扩展块,以后解决吧
+</code></pre>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/26/phpMyAdmin安装/" rel="next" title="phpMyAdmin安装">
+                <i class="fa fa-chevron-left"></i> phpMyAdmin安装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/26/使用Hexo搭建个人博客/" rel="prev" title="使用Hexo搭建个人博客">
+                使用Hexo搭建个人博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -348,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -411,6 +548,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Nginx连接Memcached"><span class="nav-number">1.</span> <span class="nav-text">Nginx连接Memcached</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Nginx-conf文件"><span class="nav-number">1.2.</span> <span class="nav-text">配置Nginx.conf文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动Memcached并连接localhost-添加数据"><span class="nav-number">1.3.</span> <span class="nav-text">启动Memcached并连接localhost,添加数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结果"><span class="nav-number">1.4.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">1.5.</span> <span class="nav-text">优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.6.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">1.7.</span> <span class="nav-text">解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#难受的问题"><span class="nav-number">1.8.</span> <span class="nav-text">难受的问题</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
